@@ -7,7 +7,9 @@ Say no more!
 
 You just need to open your Steam game propriety, and in launch option write this command:
 
-> echo "%command%" | sed 's/ORIGINALEXE/ALTERNATIVEEXETOLAUNCH/' | sh
+> echo "%command%" | sed 's/ORIGINALEXE/ALTERNATIVEEXETOLAUNCH/' | sh (This works on Debian)
+or
+> eval $(echo "%command%" | sed s/ORIGINALEXE/ALTERNATIVEEXETOLAUNCH/) (This works better on Fedora and Arch)
 
 
 For example, here is how to launch the Dark Souls III Seamless Mod with this command:
